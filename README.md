@@ -1,4 +1,4 @@
-##Cross-Compatible Embedding and Semantic Consistent Feature Construction for Sketch Re-identification
+#Cross-Compatible Embedding and Semantic Consistent Feature Construction for Sketch Re-identification
 
 ### Usage
 
