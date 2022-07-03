@@ -1,4 +1,5 @@
-#Cross-Compatible Embedding and Semantic Consistent Feature Construction for Sketch Re-identification
+# CCSC
+Cross-Compatible Embedding and Semantic Consistent Feature Construction for Sketch Re-identification
 
 ### Usage
 
