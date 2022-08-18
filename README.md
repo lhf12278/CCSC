@@ -31,11 +31,11 @@ You need to download the ImageNet pretrained transformer model : [pre-train](htt
 
 ```bash
 # Sketch Re-ID dataset 
-python train.py --config_file configs/configs/transformerPKU.yml 
+python train.py --config_file /configs/transformerPKU.yml 
 # QMUL-Shoe-v2
-python train.py --config_file configs/configs/transformer_ShoeV2.yml
+python train.py --config_file /configs/transformer_ShoeV2.yml
 # QMUL-Chair-v2
-python train.py --config_file configs/configs/transformer_ChairV2.yml
+python train.py --config_file /configs/transformer_ChairV2.yml
 ```
 
 ## Test
@@ -45,11 +45,11 @@ python train.py --config_file configs/configs/transformer_ChairV2.yml
 
 ```bash
 # Sketch Re-ID dataset 
-python test.py --config_file configs/configs/transformerPKU.yml   TEST.WEIGHT 'PKU_logs/transformer_100.pth'
+python test.py --config_file /configs/transformerPKU.yml   TEST.WEIGHT 'PKU_logs/transformer_100.pth'
 # QMUL-Shoe-v2
-python test.py --config_file configs/MSMT17/vit_transreid_stride.yml  TEST.WEIGHT 'shoe_logs/transformer_100.pth'
+python test.py --config_file /configs/transformer_ShoeV2.yml  TEST.WEIGHT 'shoe_logs/transformer_100.pth'
 # QMUL-Chair-v2
-python test.py --config_file configs/OCC_Duke/vit_transreid_stride.yml  TEST.WEIGHT 'chair_logs/transformer_100.pth'
+python test.py --config_file /configs/transformer_ChairV2.yml  TEST.WEIGHT 'chair_logs/transformer_100.pth'
 ```
 
 ## Contact
