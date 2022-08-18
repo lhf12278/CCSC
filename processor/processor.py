@@ -52,7 +52,7 @@ def do_train(cfg,
         scheduler.step(epoch)
         model.train()
 
-        for n_iter in range(20):
+        for n_iter in range(cfg.SOLVER.TOTAL_STEP):
             rgbimg, rgbvid, _ = rgb_train_iter.next_one()
             sketimg, sketvid, _ = sketch_train_iter.next_one()
             assert torch.equal(rgbvid, sketvid)
