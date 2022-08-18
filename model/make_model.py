@@ -155,8 +155,8 @@ class TrainModel(nn.Module):
         B1 = x1.shape[0]
         B2 = x2.shape[0]
 
-        x1 = self.model1.base.patch_embed(x1)  # 分块操作[256,768]
-        x2 = self.model2.base.patch_embed(x2)  # 分块操作[256,768]
+        x1 = self.model1.base.patch_embed(x1)
+        x2 = self.model2.base.patch_embed(x2)
 
         cls_tokens1 = self.model1.base.cls_token.expand(B1, -1, -1)  # stole cls_tokens impl from Phil Wang, thanks
         cls_tokens2 = self.model2.base.cls_token.expand(B2, -1, -1)
@@ -184,7 +184,7 @@ class TrainModel(nn.Module):
             x11=self.model1.layer1(x111)
             x22=self.model2.layer1(x222)
 
-            # 对齐模块
+
             if epoch >50:
                 self.classifier_1.weight.requires_grad = True
                 self.classifier_3.weight.requires_grad = True
@@ -216,7 +216,7 @@ class TrainModel(nn.Module):
 
 
 
-            # 交换模块
+
         if modal == 4:
             x1, x2 = self.Model_interra(x1, x2)
 
